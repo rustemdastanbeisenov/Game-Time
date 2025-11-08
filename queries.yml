@@ -1,0 +1,6 @@
+pg_postmaster:
+  query: "SELECT EXTRACT(EPOCH FROM pg_postmaster_start_time()) AS start_time_seconds"
+  metrics:
+    - start_time_seconds:
+        usage: "GAUGE"
+        description: "Time at which postmaster started (Unix timestamp)"
